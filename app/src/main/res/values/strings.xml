@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">USync</string>
+    <string name="notif_listener_label">Notification Mirror</string>
+
+    <!-- Main UI -->
+    <string name="status_stopped">Server is stopped</string>
+    <string name="status_running">Server is running</string>
+    <string name="open_dashboard">Open Dashboard in Browser</string>
+    <string name="start_server">Start Server</string>
+    <string name="stop_server">Stop Server</string>
+    <string name="grant_permissions">Grant Permissions</string>
+    <string name="enable_notification_access">Enable Notification Mirror</string>
+    <string name="server_address">Server address</string>
+    <string name="permissions_hint">Grant the permissions below so the dashboard can access these features:</string>
+    <string name="perm_location">📍 Location</string>
+    <string name="perm_storage">📂 Files &amp; Photos</string>
+    <string name="perm_sms">💬 SMS</string>
+    <string name="perm_notif">🔔 Notifications</string>
+    <string name="perm_clipboard">📋 Clipboard</string>
+    <string name="port_label">Port: 8080</string>
+    <string name="notif_channel_name">Server Service</string>
+    <string name="notif_channel_desc">Keeps the USync server running in the background</string>
+    <string name="notif_title">USync server running</string>
+    <string name="notif_text">Open http://%1$s:8080 on your computer</string>
+    <string name="no_wifi">Connect to Wi-Fi first</string>
+</resources>

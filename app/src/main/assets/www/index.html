@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>USync — Dashboard</title>
+<link rel="stylesheet" href="/style.css">
+<link rel="icon" href="/icon.png">
+</head>
+<body>
+<div class="app">
+    <header>
+        <div class="brand"><img src="/icon.png" width="32" height="32" style="border-radius:6px;"> USync</div>
+        <div class="status">
+            <span id="connDot" class="dot dot-red"></span>
+            <span id="connText">Connecting…</span>
+        </div>
+    </header>
+
+    <nav class="tabs">
+        <button class="tab active" data-tab="overview">Overview</button>
+        <button class="tab" data-tab="files">Files</button>
+        <button class="tab" data-tab="location">Location</button>
+        <button class="tab" data-tab="sms">SMS</button>
+        <button class="tab" data-tab="notifications">Notifications</button>
+        <button class="tab" data-tab="clipboard">Clipboard</button>
+    </nav>
+
+    <main>
+        <!-- Overview -->
+        <section id="tab-overview" class="tab-panel active">
+            <h2>Device Status</h2>
+            <div class="card-grid" id="deviceCards">
+                <div class="card"><span class="label">Model</span><span class="value" id="d-model">—</span></div>
+                <div class="card"><span class="label">Android</span><span class="value" id="d-android">—</span></div>
+                <div class="card"><span class="label">Battery</span><span class="value" id="d-battery">—</span></div>
+                <div class="card"><span class="label">Charging</span><span class="value" id="d-charging">—</span></div>
+                <div class="card"><span class="label">Storage Free</span><span class="value" id="d-free">—</span></div>
+                <div class="card"><span class="label">Storage Used</span><span class="value" id="d-used">—</span></div>
+            </div>
+            <div class="bar-wrap">
+                <div class="bar-label">Storage Usage</div>
+                <div class="bar"><div id="storageBar" class="bar-fill"></div></div>
+            </div>
+        </section>
+
+        <!-- Files -->
+        <section id="tab-files" class="tab-panel">
+            <div class="section-header">
+                <h2>File Browser</h2>
+                <div class="toolbar">
+                    <button id="upBtn" class="btn">⬆ Up</button>
+                    <span id="curPath" class="path">/storage/emulated/0</span>
+                </div>
+            </div>
+
+            <div class="upload-container">
+                <div class="upload-box">
+                    <input type="file" id="fileInput" class="hidden-input">
+                    <label for="fileInput" class="upload-label">
+                        <span id="fileNameDisplay">Choose a file to export...</span>
+                    </label>
+                    <button id="uploadBtn" class="btn primary">Export to Mobile ⬆</button>
+                </div>
+                <div id="uploadStatus" class="status-msg"></div>
+            </div>
+
+            <div class="file-table-header">
+                <span class="col-name">Name</span>
+                <span class="col-size">Size</span>
+                <span class="col-action">Action</span>
+            </div>
+            <ul id="fileList" class="file-list"></ul>
+        </section>
+
+        <!-- Other sections remain same... -->
+        <section id="tab-location" class="tab-panel">
+            <h2>Phone Location</h2>
+            <button id="locBtn" class="btn primary">Refresh location</button>
+            <div id="locInfo" class="muted">Press refresh.</div>
+            <iframe id="mapFrame" class="map" src=""></iframe>
+        </section>
+
+        <section id="tab-sms" class="tab-panel">
+            <h2>Recent SMS</h2>
+            <button id="smsBtn" class="btn primary">Load messages</button>
+            <ul id="smsList" class="sms-list"></ul>
+        </section>
+
+        <section id="tab-notifications" class="tab-panel">
+            <h2>Notifications</h2>
+            <button id="notifBtn" class="btn primary">Refresh</button>
+            <ul id="notifList" class="notif-list"></ul>
+        </section>
+
+        <section id="tab-clipboard" class="tab-panel">
+            <h2>Clipboard</h2>
+            <button id="clipBtn" class="btn primary">Read clipboard</button>
+            <textarea id="clipBox" class="clip-box" placeholder="Clipboard content will appear here…"></textarea>
+        </section>
+    </main>
+</div>
+<script src="/app.js"></script>
+</body>
+</html>

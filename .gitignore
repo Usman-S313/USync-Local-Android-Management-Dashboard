@@ -1,0 +1,25 @@
+# Gradle files
+.gradle/
+build/
+
+# IntelliJ IDEA files
+.idea/
+*.iml
+
+# Android Studio files
+local.properties
+.externalNativeBuild/
+.cxx/
+captures/
+.DS_Store
+
+# Built APKs
+*.apk
+
+# Caches
+.idea/caches/
+.idea/libraries/
+.idea/modules.xml
+.idea/workspace.xml
+.idea/navEditor.xml
+.idea/assetWizardSettings.xml

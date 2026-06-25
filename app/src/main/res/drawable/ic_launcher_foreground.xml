@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Simple phone icon on blue bg (background handles color) -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M38,20 L70,20 C72,20 74,22 74,24 L74,84 C74,86 72,88 70,88 L38,88 C36,88 34,86 34,84 L34,24 C34,22 36,20 38,20 Z M40,28 L68,28 L68,76 L40,76 Z M50,80 L58,80 C59,80 60,81 60,82 C60,83 59,84 58,84 L50,84 C49,84 48,83 48,82 C48,81 49,80 50,80 Z" />
+</vector>
